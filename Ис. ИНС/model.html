@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>ИНС</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="slider/slider_lib.css"/>
+		<link rel="stylesheet" href="tools/main.css"/>
+		<link rel="stylesheet" href="canvas/canvas.css"/>
+		<script type='text/javascript' src='canvas/canvas.js'></script>
+		<script type='text/javascript' src='slider/slider_lib.js'></script>
+		<script type='text/javascript' src='tools/filesaver.js'></script>
+		<script type='text/javascript' src='tools/main.js'></script>
+		<script type='text/javascript' src='tools/perceptron.js'></script>
+		<script type='text/javascript' src='tools/es.js'></script>
+		<script type='text/javascript' src='tools/elman.js'></script>
+		<script type='text/javascript' src='tools/soma.js'></script>
+		<script type='text/javascript' src='tools/init_tools.js'></script>
+
+	</head>
+	<body>
+		<div id='e-body'>
+
+			<div id='e-controls'>
+				<div class='e-label' style="color: #003333">ИНС</div>
+
+
+				<input style="margin: 20px 20px 0 20px" type="button" value="Создать сеть" onclick="create()">
+
+				<input style="margin: 20px 20px 0 20px" type="button" value="Обучить сеть" onclick="study()">
+
+
+			</div>
+
+			<div id='e-map'>
+				<div style="display: inline-block; position: relative; height: 45%; width: 100%">
+					<div class='e-label'>Выход</div>
+					<textarea class="e-input" id="e-out" style="display: block; position: relative; height: 45%; width: 90%"></textarea>
+				</div>
+				<div style="display: block; position: relative; height: 45%">
+					<div class='e-label'>График предсказанных рядов</div>
+					<div class="e-canv" id="e-field"></div>
+				</div>
+			</div>	
+		</div>
+	</body>
+</html>

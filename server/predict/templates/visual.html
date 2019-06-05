@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Прогноз</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  		{% load static %}
+		<link rel="stylesheet" href="{% static 'visual/visual.css' %}"/>
+		<link rel="stylesheet" href="{% static 'visual/canvas.css' %}"/>
+		<link rel="stylesheet" href="{% static 'visual/window_ui.css' %}"/>
+		<script type='text/javascript' src="{% static 'visual/jquery-3.4.1.min.js' %}"></script>
+		<script type='text/javascript' src="{% static 'visual/visual.js' %}"></script>
+		<script type='text/javascript' src="{% static 'visual/window_ui.js' %}"></script>
+		<script type='text/javascript' src="{% static 'visual/canvas.js' %}"></script>
+		<script type='text/javascript' src="{% static 'visual/init_tools.js' %}"></script>
+		
+		<style type="text/css">
+			body {
+				-webkit-user-select:	none;
+				-moz-user-select:		none;
+				-ms-user-select: 		none;
+				font-family: -apple-system,BlinkMacSystemFont,Roboto,Open Sans,Helvetica Neue,sans-serif;
+				padding: 0; margin: 0;
+				width: 100%; height: 100%;
+				position: absolute;
+				overflow: hidden;
+			}
+		</style>
+
+	</head>
+	<body>
+		
+		<div id='v-header'>
+			Прогнозирование состояния сооружений
+		</div>
+		
+		<div id='v-body'>
+			<div id='v-content'>
+				{% csrf_token %}
+				
+				<div style="margin-top: 20px;" class="v-line">
+					<div class="v-line-header v-line-about">Информация</div>
+					<div class="v-line-header v-line-statistic">Статистика</div>
+					<div class="v-line-header v-line-graph">Соотношение</div>
+					<div class="v-line-header v-line-canvas">График</div>
+					<div class="v-line-header v-line-remove">Удалить</div>
+				</div>
+
+				<div id='v-ser-content'>
+					
+				</div>
+				
+				<div id="v-button" onclick="addLine()">Добавить новый ряд</div>
+			</div>
+
+			<div class="v-after-page">Макаров Александр, по всем вопросам пишите по адресу darkbotone@gmail.com</div>
+			<div class="v-after-page">Москва 2019</div>
+		</div>
+	</body>
+</html>
